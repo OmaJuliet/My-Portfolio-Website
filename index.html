@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scale=1.0">
+    <meta name="description" content="Personal portfolio website for Juliet, a front end developer" >
+    <meta name="keywords" content="web development, front end development, portfolio website" >
+    <title>Juliet Ofoegbu's portfolio</title>
+
+    <!--Link to external stylesheet-->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Swiper css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!--font awesome icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
+    <!--Script tag for jquery-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> 
+
+    <!-- Tailwindcss -->
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+ 
+     
+</head>
+<body> 
+
+    <div class="scroll-up-btn animate-bounce ">
+        <i class="fas fa-angle-double-up"></i>
+    </div>
+
+<!--hero and navigation section-->
+    <header>
+        <!-- Navigation Bar -->
+        <nav>
+            <div class="nav-inner container">
+                <h1 class="nav-logo">Juliet</h1>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact" class="nav-button">Contact Me</a></li>
+                </ul>
+
+                <!-- Hamburger Menu -->
+                <i class="fas fa-bars nav-hamburger" onclick="toggleMenu()"></i>
+            </div> 
+
+            <!-- Overlay Menu section-->
+            <div class="nav-overlay">
+                <i class="fas fa-bars fa-times nav-overlay-close" onclick="toggleMenu()"></i>
+                <ul class="nav-overlay-links">
+                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                    <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+                    <li><a href="#services" onclick="toggleMenu()">Services</a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">Contact Me</a></li>
+                </ul>
+            </div> 
+        </nav>
+
+        <!-- Header Content -->
+        <div class="header-inner container">
+            <div class="header-intro">
+                <h1 class="header-intro-heading">
+                    Hi, <br> I'm Juliet. <br> A Frontend Developer.
+                </h1>
+                <p class="header-intro-lead">
+                    I'm skilled at converting web designs from figma and dribble, into functional and responsive websites and web apps.
+                </p>
+                <div class="header-intro-buttons">
+                    <a href="https://drive.google.com/file/d/1GN0aatE_eLj7_230Rt2g3AEG29Mn5bQ6/view?usp=drivesdk" class="header-lightgreen-button" target="_blank"><i class="fa fa-download"></i> Download Resume</a>
+                </div>
+            </div>
+
+            <!--Header Image -->
+            <div class=""> 
+                <img src="images/testing.png" class="bg-image">
+            </div>
+
+
+        </div>
+    </header>
+
+
+<!--about section--> 
+    <section id="about" class="text-black body-font"> 
+        <h2 class="text-center title">About me</h2>
+        <div class="container mx-auto flex px-5 py-14 md:flex-row flex-col items-center">
+          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+            <img class="object-cover object-center rounded-full" alt="my-image" src="images/image1.png" data-aos="fade-down-right"> 
+          </div>
+          <div class="lg:flex-grow md:w-1/2 lg:pl-4 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+            <h1 class="title-font sm:text-3xl text-2xl mb-4 font-medium text-gray-900">A little about me</h1>
+            <p class="mb-8 leading-relaxed text-lg">I'm Juliet, a frontend developer and budding full stack developer.
+            I am a final year accountancy undergraduate at Nnamdi Azikiwe University, Anambra State, Nigeria. <br> <br> My tech journey began in the year 2020 during the covid period where I started learning Python. Early 2022, I got into web developement and started my web dev journey with front end development with the aim of becoming a full stack developer.
+            <br><br>During the course of my front end development journey, I have been able to acquire relevant technical and soft skills which grants me the ability to build efficient and aesthetically pleasing user interfaces, creating responsive and  functional websites, 
+             in line with modern best practices and at the same time working daily to acquire more skills and further improve myself.</p>
+            <div class="flex justify-center">
+              <button class="inline-flex text-white border-0 py-2 px-6 focus:outline-none rounded-lg text-lg" id="about-btn"><a href="https://github.com/OmaJuliet" target="_blank"><i class="fab fa-github"></i> My Github</a></button>
+            </div>
+          </div>
+        </div>
+    </section>
+
+
+
+<!--project section-->
+<div class="project" id="projects">
+    <div class="containers"> 
+        <div class="project-title">
+            <h2>Projects</h2>
+            <p>Here are some projects I've worked on:</p>
+        </div> 
+    </div>
+    <div class="project-wrapper">
+        <div class="project-button project-button-next"><i class="fas fa-angle-right" style="color: #fff"></i></div>
+        <div class="project-button project-button-prev"><i class="fas fa-angle-left" style="color: #fff"></i></div>
+        <div class="project-carousel">
+            <div class="swiper-container">
+                <div class="swiper-wrapper"> 
+
+                    <!--First card-->
+                    <div class="swiper-slide">
+                        <div class="project-item">
+                            <div class="project-avatar"><img src="images/project1.jpeg"></div>
+                            <div class="project-text">
+                                <h3>EnDasmu NFT</h3>
+                                <p>This is an nft marketplace landing page for EnDasmu project. It was a team pair programming collab exercise project to practicalize the use of git and github. As the team lead, my role was assigning tasks, cordinating team members, debugging team mates codes during merging.</p>
+                                <div class="demo-part">
+                                    <button class="project-btn"><a href="https://github.com/OmaJuliet/EnDasmu-NFT-Project.git" target="_blank">Github</a></button>
+                                    <button class="project-btn"><a href="https://endasmu-nft.netlify.app/" target="_blank">Demo</a></button>
+                                </div>  
+                            </div>
+                        </div>
+                    </div> 
+  
+                    <!--second card--->
+                    <div class="swiper-slide">
+                        <div class="project-item">
+                            <div class="project-avatar"><img src="images/project2.jpeg"></div>
+                            <div class="project-text">
+                                <h3>Oma Tour</h3>
+                                <p>This is a touring agency landing page with adventurous tour sites, amazing packages, different payment options, translation softwares to ease communication between tourists and locals. It was styled using Tailwindcss to test my Tailwindcss knowledge.</p>
+                                <div class="demo-part">
+                                    <button class="project-btn"><a href="https://github.com/OmaJuliet/OmaTour.git" target="_blank">Github</a></button>
+                                    <button class="project-btn"><a href="https://oma-tour.netlify.app" target="_blank">Demo</a></button>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+
+                    <!--fifth card-->
+                    <div class="swiper-slide">
+                        <div class="project-item">
+                            <div class="project-avatar"><img src="images/project6.jpeg"></div>
+                            <div class="project-text">
+                                <h3>Julie's ToDo App</h3>
+                                <p>This is a functional and responsive todo web app. Building this project, helped me fully understand how to work with some javascript functions, further improving my knowledge of JavaScipt</p>
+                                <div class="demo-part">
+                                    <button class="project-btn"><a href="https://github.com/OmaJuliet/Julie-s-ToDo-App.git" target="_blank">Github</a></button>
+                                    <button class="project-btn"><a href="https://julies-todo-app.netlify.app" target="_blank">Demo</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!--third card-->
+                    <div class="swiper-slide">
+                        <div class="project-item">
+                            <div class="project-avatar"><img src="images/project3.jpeg"></div>
+                            <div class="project-text">
+                                <h3>Oma Empire</h3>
+                                <p>A fictional shopping website dealing in female wears. Oma Empire provides discount sales, door-to-door delivery, all forms of payments and enticing products. Built using HTML, CSS, animations and JavaScript</p>
+                                <div class="demo-part">
+                                    <button class="project-btn"><a href="https://github.com/OmaJuliet/Oma-Empire.git" target="_blank">Github</a></button>
+                                    <button class="project-btn"><a href="https://oma-empire.netlify.app" target="_blank">Demo</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--fourth card-->
+                    <div class="swiper-slide">
+                        <div class="project-item">
+                            <div class="project-avatar"><img src="images/project5.jpeg"></div>
+                            <div class="project-text">
+                                <h3>Julie's Calc</h3>
+                                <p>This is a functional and responsive calculator. I was able to fully understand how to work with mathematical functions in JS. It was built using HTML, CSS and JavaScript to improve my JS skills.</p>
+                                <div class="demo-part">
+                                    <button class="project-btn"><a href="https://github.com/OmaJuliet/Julie-s-Calc.git" target="_blank">Github</a></button>
+                                    <button class="project-btn"><a href="https://julies-calc.netlify.app" target="_blank">Demo</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--sixth card-->
+                    <div class="swiper-slide">
+                        <div class="project-item">
+                            <div class="project-avatar"><img src="images/project4.jpeg"></div>
+                            <div class="project-text">
+                                <h3>EatRite</h3>
+                                <p>A website for a fictional restaurant which provides online and offline services to customers, catering services, varities of meals to choose from, pay-on-delivery services and refunds on mistaken payments. Built using HTML, CSS and JavaScript</p>
+                                <div class="demo-part">
+                                    <button class="project-btn"><a href="https://github.com/OmaJuliet/EatRite.git" target="_blank">Github</a></button>
+                                    <button class="project-btn"><a href="https://eatrite.netlify.app" target="_blank">Demo</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!--seventh card-->
+                     <div class="swiper-slide">
+                        <div class="project-item">
+                            <div class="project-avatar"><img src="images/work-in-progress.jpg"></div>
+                            <div class="project-text">
+                                <h3>Julie's Chat App</h3>
+                                <p>This particular project was built to improve my javascript skills. I was able to fully understand adding and deleting elements in JS. It was built using HTML, CSS, Tailwindcss and JavaScript. It's still a <b style="font-size:18px;">work in progress</b>.</p>
+                                <div class="demo-part">
+                                    <button class="project-btn"><a href="" target="_blank">Github</a></button>
+                                    <button class="project-btn"><a href="" target="_blank">Demo</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="project-pagination"></div>
+    </div>
+</div>
+<!--project sections ends-->
+
+
+
+
+
+<!--skills section-->
+    <section class="text-gray-600 body-font" id="skills">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-20">
+            <h1 class="text-center">Skills</h1> 
+            <p class="text-center text-2xl mt-2  text-black font-medium">These are skills and technologies I'm proficient with: </p>
+          </div> 
+
+          <div class="flex flex-wrap -m-4 text-center">
+
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full" id="skills-card">
+              <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <img src="images/html.png" class="w-12 h-12 mb-3 inline-block">
+                <h2 class="title-font font-medium text-2xl text-gray-900">HTML</h2>
+              </div>
+            </div>
+
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full" id="skills-card">
+              <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <img src="images/css.png" class="w-12 h-12 mb-3 inline-block">
+                <h2 class="title-font font-medium text-2xl text-gray-900">CSS</h2>
+              </div>
+            </div>
+
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full" id="skills-card">
+              <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <img src="images/js.png" class="w-12 h-12 mb-3 inline-block">
+                <h2 class="title-font font-medium text-2xl text-gray-900">JavaScript</h2>
+              </div>
+            </div>
+
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full" id="skills-card">
+              <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <img src="images/git.png" class="w-12 h-12 mb-3 inline-block">
+                <h2 class="title-font font-medium text-2xl text-gray-900">Git</h2>
+              </div>
+            </div>
+
+            
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full" id="skills-card">
+                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <img src="images/github.png" class="w-12 h-12 mb-3 inline-block">
+                  <h2 class="title-font font-medium text-2xl text-gray-900">Github</h2>
+                </div> 
+              </div>
+  
+              <div class="p-4 md:w-1/4 sm:w-1/2 w-full" id="skills-card">
+                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <img src="images/tailwindcss.png" class="w-12 h-12 mb-3 inline-block">
+                  <h2 class="title-font font-medium text-2xl text-gray-900">Tailwindcss</h2>
+
+                </div>
+              </div>
+  
+              <div class="p-4 md:w-1/4 sm:w-1/2 w-full" id="skills-card">
+                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                  <img src="images/python.png" class="w-12 h-12 mb-3 inline-block">
+                  <h2 class="title-font font-medium text-2xl text-gray-900">Python</h2>
+                </div>
+              </div>
+
+              <!-- <div class="p-4 md:w-1/4 sm:w-1/2 w-full" id="skills-card">
+                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                  <img src="images/django.png" class="w-12 h-12 mb-3 inline-block">
+                  <h2 class="title-font font-medium text-2xl text-gray-900">Django</h2>
+                </div>
+              </div> -->
+
+          </div>
+        </div>
+    </section>
+
+
+
+
+
+<!--services section-->
+    <section class="py-16 px-0 md:py-12" id="services">
+        <div class="container px-5 py-14 mx-auto">
+            <h1 class="text-center">Services</h1> 
+            <p class="text-center text-2xl mt-2 mb-2 text-black font-medium">These are services I provide: </p>
+
+          <div class="flex flex-wrap -mx-4 -mb-10 mt-12 sm:m-4 md:space-y-0 space-y-6">
+            <div class="p-4 md:w-1/3 flex">
+              <div class="flex-grow pl-6">
+                <h2 class="text-xl title-font font-medium mb-2 text-blue-600">Website and Web App Development</h2>
+                <p class="leading-relaxed text-base">I'm proficient in website and web app development. Converting web designs, figma and dribble designs into functional and responsive live sites, apps.</p>
+                </a>
+              </div>
+            </div>
+
+            <div class="p-4 md:w-1/3 flex">
+              <div class="flex-grow pl-6">
+                <h2 class="text-xl title-font font-medium mb-2 text-blue-600">Open-Source Contributions</h2>
+                <p class="leading-relaxed text-base">Contribution to open-source is a great way to improve and collaborate. I also contirbute to open source projects and would love to be involved in more.</p>
+                </a>
+              </div>
+            </div>
+
+            <div class="p-4 md:w-1/3 flex">
+                <div class="flex-grow pl-6">
+                  <h2 class="text-xl title-font font-medium mb-2 text-blue-600">Backend Development</h2>
+                  <p class="leading-relaxed text-base">Backend functionalities for server side of the web. I'm an entry level backend developer starting out using Python and django and I've been able to work on a few projects.</p>
+                  </a>
+                </div>
+            </div>
+  
+          </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+<!-- contact section-->
+<section class="contact" id="contact">
+    <div class="max-width">
+        <h2 class="title">Contact me</h2>
+        <div class="contact-content">
+
+            <div class="column left">  
+                <div class="text">Reach Out</div>
+                <p>Feel free to click on the social media icons to visit my social media pages or reach me via  <a href="mailto:julieto2001@gmail.com">Email</a></p>
+                <div class="icons">
+                    <div class="row">
+                        <a href="https://www.linkedin.com/in/julietofoegbu" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <div class="info">
+                            <div class="head">Linkedin</div>
+                            <div class="sub-title">Juliet Ofoegbu</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <a href="https://twitter.com/JulietMesoma?t=j9VJtpuq6IjCnVaMFgdIAw&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <div class="info">
+                            <div class="head">Twitter</div>
+                            <div class="sub-title">@JulietMesoma</div>
+                        </div> 
+                    </div>  
+
+                    <div class="row">
+                        <a href="https://www.google.com/maps/place/Lagos/@6.5480357,3.1438726,11z/data=!3m1!4b1!4m5!3m4!1s0x103b8b2ae68280c1:0xdc9e87a367c3d9cb!8m2!3d6.5243793!4d3.3792057" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
+                        <div class="info">
+                            <div class="head">Location</div>
+                            <div class="sub-title">Lagos, Nigeria</div>
+                        </div> 
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="column right">
+                <div class="text">Message me</div> 
+                <form action="" method="POST"> 
+
+                    <div class="fields">
+                        <div class="field fname">
+                            <input type="text" placeholder="Full Name" name="fname" required>
+                        </div>
+                    </div> 
+
+                    <div class="field email">
+                        <input type="email" placeholder="Email" name="email" required>
+                    </div>
+
+                    <div class="field textarea">
+                        <textarea cols="30" rows="10" placeholder="Message.." name="message" required></textarea>
+                    </div>
+
+                    <div class="button-area">
+                        <button type="submit"><a href="mailto:julieto2001@gmail.com">Send message</a></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- footer section-->
+<footer>
+    <span>Crafted with <i class="fas fa-heart"></i> <a href="https://www.linkedin.com/in/julietofoegbu" target="_blank">by Juliet Ofoegbu</a>  <br>&copy; 2022 || All rights reserved.</span>
+</footer>
+
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+<!--My personal portfoilio website built using html, css, javascript, jquery and tailwindcss-->
