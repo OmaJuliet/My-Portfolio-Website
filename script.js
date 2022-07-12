@@ -1,5 +1,11 @@
-//   all ------------------
-function initParadoxWay() {
+// Javascript for Hero/Nav section 
+const overlayMenu = document.querySelector(".nav-overlay");
+const toggleMenu = () => {
+  overlayMenu.classList.toggle("open");
+};
+
+
+function toActivateSwipe() {
     "use strict";
    
     if ($(".project-carousel").length > 0) {
@@ -29,9 +35,6 @@ function initParadoxWay() {
         });
     }
     
-// bubbles -----------------
-    
-    
     setInterval(function () {
         var size = randomValue(sArray);
         $('.bubbles').append('<div class="individual-bubble" style="left: ' + randomValue(bArray) + 'px; width: ' + size + 'px; height:' + size + 'px;"></div>');
@@ -45,9 +48,8 @@ function initParadoxWay() {
     
 }
 
-//   Init All ------------------
 $(document).ready(function () {
-    initParadoxWay();
+    toActivateSwipe();
 });
 
 
@@ -56,12 +58,6 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $(window).scroll(function () {
-        // sticky navbar on scroll script
-        if (this.scrollY > 20) {
-            $('.navbar').addClass("sticky");
-        } else {
-            $('.navbar').removeClass("sticky");
-        }
 
         // scroll-up button show/hide script
         if (this.scrollY > 500) {
@@ -93,10 +89,5 @@ $(document).ready(function () {
 
 
 
-// Javascript for Hero/Nav section assigned to Juliet
-const overlayMenu = document.querySelector(".nav-overlay");
-const toggleMenu = () => {
-  overlayMenu.classList.toggle("open");
-};
 
 
