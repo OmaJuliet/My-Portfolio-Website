@@ -268,10 +268,10 @@ header .header-inner .header-intro-buttons .header-lightgreen-button:hover {
     }
     header nav .nav-overlay-close {
         color: #000;
-        font-size: 2rem; /* 3rem*/
+        font-size: 2rem; 
         position: fixed;
-        top: 2rem; /* 1.5rem */
-        right: 2rem; /* 1.5rem*/
+        top: 2rem; 
+        right: 2rem; 
     }
     header nav .nav-overlay-links {
         display: flex;
@@ -298,7 +298,7 @@ header .header-inner .header-intro-buttons .header-lightgreen-button:hover {
     }
     header nav .nav-inner .nav-hamburger {
         display: block;
-        font-size: 2rem; /* 2.5rem */
+        font-size: 2rem;
         color: #161515;
     }
     header .header-inner .header-intro {
@@ -612,8 +612,6 @@ section .title{
     border-radius: 0.5rem;
     box-shadow: 0 0 0.5rem rgb(53, 52, 52);
 }
-
-
 
 
 
